@@ -1,9 +1,29 @@
 # Kwitter開発プロジェクト
 
+## 何をすればいいのか
+
+* アプリの基本骨格は4基の「商品管理」を流用する。(TransactionScript適用済みのもの)
+public class [XXX]Command extends AbstractCommandを追加していけば何とかなるようになっている。
+
+今現在作成予定のCommand
+・投稿
+・閲覧
+・ログイン（アウト）
+・新規登録
+・
+
+Commandではないもの
+・LoginFilter
+・UserBean
+
+
+
 ## ディレクトリとファイルの概要
 * documentsディレクトリ
-
-* srcディレクトリ
+    * UMLなど。
+    
+* WEB-INFディレクトリ
+    * .java とか .classとか？
 
 
 ## 開発環境について
@@ -24,6 +44,7 @@
     * Oracle Database
 
 ## 開発の流れ
+
 下準備
 
     1. KwitterリモートリポジトリをGitHub上でフォーク（自分のリモートにコピー）※最初だけ
