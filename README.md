@@ -6,7 +6,7 @@
 public class [XXX]Command extends AbstractCommandを追加していけば何とかなるようになっている。
 
 今現在作成予定のCommand
-・投稿
+	・投稿
 ・閲覧
 ・ログイン（アウト）
 ・新規登録
