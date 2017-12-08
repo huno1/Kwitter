@@ -7,25 +7,44 @@
     ・ 適当にこのファイル(README.md)に名前を書いてCommitしてみよう。
 	・　Summaryには修正内容
 	・ Fetch(pull) = ダウンロード / Commit & Push = アップロード. pushまでしないといみない。
+
+
+## Database
+
+	* 投稿表
+		・　投稿ID(number)
+		・　作成者
+		・　内容
+		・　日付
+		・　表示/非表示/削除状態
+		
+	* ユーザー表
+		・　ユーザーID(number)
+		・　ログイン用 ID
+		・　PASSWORD
+		・　ニックネーム
+		・　登録日、最終接続日など？
+		・　紹介欄
+		・　ICON, 写真、　画像など
+		・　その他設定？
+		
+	* 返信表
+		・　返信ID
+		・　対象投稿ID
+		・　対象ユーザーID(No必須)
+		・　作成者ID
+		・　日付
+		・　内容
+		
+	* フォロー表
+		・　した人ID
+		・　された人ID
+		・　＋＠？
 	
-	
-## 何をすればいいのか
-
-
-* アプリの基本骨格は4基の「商品管理」を流用する。(TransactionScript適用済みのもの)
-public class [XXX]Command extends AbstractCommandを追加していけば何とかなるようになっている。
-
-今現在作成予定のCommand
-	・投稿
-・閲覧
-・ログイン（アウト）
-・新規登録
-・
-
-Commandではないもの
-・LoginFilter
-・UserBean
-
+	* 添付表
+		・　添付ID
+		・　対象投稿ID
+		・　ファイルPATH
 
 
 ## ディレクトリとファイルの概要
