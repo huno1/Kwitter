@@ -1,7 +1,7 @@
 # Kwitter開発プロジェクト
 
 ## 何をすればいいのか
-修正pushテスト
+
 
 * アプリの基本骨格は4基の「商品管理」を流用する。(TransactionScript適用済みのもの)
 public class [XXX]Command extends AbstractCommandを追加していけば何とかなるようになっている。
