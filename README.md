@@ -1,5 +1,14 @@
 # Kwitter開発プロジェクト
 
+### GitHub Desktopの使い方
+
+    ・ [File]-[Clone a repository...]-[URL]-[https://github.com/huno1/Kwitter][C:\repository]-[Clone]
+	・ [Fetch Origin](2行目の右)
+    ・ 適当にこのファイル(README.md)に名前を書いてCommitしてみよう。
+	・　Summaryには修正内容
+	・ Fetch(pull) = ダウンロード / Commit & Push = アップロード. pushまでしないといみない。
+	
+	
 ## 何をすればいいのか
 
 
@@ -92,15 +101,6 @@ JUnitの基本ルール
 	4. 終了処理（必要な場合）・・・次のテストに影響が内容に後始末
 
 
-### GitHub Desktopの使い方
-
-    ・ [File]-[Clone a repository...]-[URL]-[https://github.com/huno1/Kwitter][C:\repository]-[Clone]
-	・ [Fetch Origin](2行目の右)
-    ・ 適当にこのファイル(README.md)に名前を書いてCommitしてみよう。
-	・　Summaryには修正内容
-	・ Fetch(pull) = ダウンロード / Commit & Push = アップロード. pushまでしないといみない。
-	
-	
 	
 	
 ### (旧)Gitの使い方
