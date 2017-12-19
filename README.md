@@ -1,6 +1,7 @@
 # Kwitter開発プロジェクト
 橘川 裕太
-高橋海音
+高橋海音<br>
+及川大輔
 
 ### GitHub Desktopの使い方
 
