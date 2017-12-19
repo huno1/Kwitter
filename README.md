@@ -1,4 +1,5 @@
 # Kwitter開発プロジェクト
+橘川 裕太
 
 ### GitHub Desktopの使い方
 
