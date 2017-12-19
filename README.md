@@ -1,5 +1,6 @@
 # Kwitter開発プロジェクト
 橘川 裕太
+高橋海音
 
 ### GitHub Desktopの使い方
 
