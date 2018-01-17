@@ -42,7 +42,9 @@ create table Follow(
 
 
 
-シーケンス
+
+
+
 
 CREATE SEQUENCE POSTID_SEQ
 	INCREMENT BY 1
