@@ -13,7 +13,7 @@ create table Users(
 	uPassword VARCHAR2(30) NOT NULL,
 	uUserName VARCHAR2(40) NOT NULL,
 	uRegistrationDate DATE SYSDATE,
-	uIntroduction VARCHAR2(320) default SYSDATE
+	uIntroduction VARCHAR2(320) default SYS DATE
 	uIconPath VARCHAR2(500) default  'default.png',
 	uHeaderImagePath VARCHAR2(500) default 'default.png'
 );
