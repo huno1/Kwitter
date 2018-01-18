@@ -1,7 +1,7 @@
 create table Post(
 	pPostID NUMBER(10) CONSTRAINT pk_postid PRIMARY KEY,
 	uUserID NUMBER(10) CONSTRAINT fk_users_userid REFERENCES users(uUserID),
-	pPostContext VARCHAR2(500) NOT NULL
+	pPostContext VARCHAR2(500) NOT NULL,
 	pPostDate DATE default sysdate,
 	pState NUMBER(1)
 );
