@@ -32,13 +32,13 @@ create table Reply(
 
 create table Attachment(
 	aAttachmentID NUMBER(10) CONSTRAINT pk_attachmentid PRIMARY KEY,
-	pPostID NUMBER(10) CONSTRAINT fk_post_postid REFERENCES Post(PostID), 
+	pPostID NUMBER(10) CONSTRAINT fk_post_postid REFERENCES Post(pPostID), 
 	aFIlePath VARCHAR2(500) NOT NULL
 );
 
 create table Follow(
-	uFollowID NUMBER(10) CONSTRAINT fk_user_followid REFERENCES Users(UserID),
-	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(UserID)
+	uFollowID NUMBER(10) CONSTRAINT fk_user_followid REFERENCES Users(uUserID),
+	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID)
 );
 	
 
