@@ -14,7 +14,7 @@ create table Users(
 	uUserName VARCHAR2(40) NOT NULL,
 	uRegistrationDate DATE default SYSDATE,
 	uIntroduction VARCHAR2(320) default SYSDATE
-	uIconPath VARCHAR2(500) default  'default.png',
+	uIconPath VARCHAR2(500) default 'default.png',
 	uHeaderImagePath VARCHAR2(500) default 'default.png'
 );
 
