@@ -32,7 +32,7 @@ create table Reply(
 
 create table Attachment(
 	aAttachmentID NUMBER(10) CONSTRAINT pk_attachmentid PRIMARY KEY,
-	pPostID NUMBER(10) CONSTRAINT fk_post_postid REFERENCES Post(pPostID), 
+	pPostID NUMBER(10) CONSTRAINT fk_post_postid2 REFERENCES Post(pPostID), 
 	aFIlePath VARCHAR2(500) NOT NULL
 );
 
