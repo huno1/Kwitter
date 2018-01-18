@@ -9,7 +9,7 @@ create table Post(
 
 create table Users(
 	uUserID NUMBER(10) CONSTRAINT pk_userid PRIMARY KEY,
-	uLoginID VARCHAR2(30) UNIQUE NOTNULL,
+	uLoginID VARCHAR2(30) UNIQUE NOT NULL,
 	uPassword VARCHAR2(30) NOT NULL,
 	uUserName VARCHAR2(40) NOT NULL,
 	uRegistrationDate DATE SYSDATE,
