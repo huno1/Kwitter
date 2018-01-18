@@ -4,7 +4,7 @@ create table Post(
 	pPostContext VARCHAR2(500) NOT NULL
 	pPostDate DATE default sysdate,
 	pState NUMBER(1)
-)
+);
 
 
 create table Users(
@@ -16,7 +16,7 @@ create table Users(
 	uIntroduction VARCHAR2(320) default SYSDATE
 	uIconPath VARCHAR2(500) default  'default.png',
 	uHeaderImagePath VARCHAR2(500) default 'default.png'
-)
+);
 
 
 	
@@ -27,19 +27,19 @@ create table Reply(
 	uUserID NUMBER(10) CONSTRAINT fk_user_userid REFERENCES Users(uUserID),
 	rReplyDate DATE default SYSDATE,
 	rReplyContent VARCHER2(240) NOT NULL
-)
+);
 
 
 create table Attachment(
 	aAttachmentID NUMBER2(10) CONSTRAINT pk_attachmentid PRIMARY KEY,
 	pPostID NUMBER2(10) CONSTRAINT fk_post_postid REFERENCES Post(PostID), 
 	aFIlePath VARCHER2(500) NOT NULL
-)
+);
 
 create table Follow(
 	uFollowID NUMBER(10) CONSTRAINT fk_user_followid REFERENCES Users(UserID),
 	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(UserID)
-)
+);
 	
 
 
