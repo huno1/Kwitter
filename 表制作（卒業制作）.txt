@@ -3,8 +3,9 @@ create table Users(
 	uLoginID VARCHAR2(30) UNIQUE NOT NULL,
 	uPassword VARCHAR2(30) NOT NULL,
 	uUserName VARCHAR2(40) NOT NULL,
-	uRegistrationDate DATE DEFAULT SYSDATE,
-	uIntroduction VARCHAR2(320) default  'default.png',
+	uRegistrationDate DATE default SYSDATE,
+	uIntroduction VARCHAR2(320) default SYSDATE,
+	uIconPath VARCHAR2(500) default 'default.png',
 	uHeaderImagePath VARCHAR2(500) default 'default.png'
 );
 
@@ -35,11 +36,7 @@ create table Follow(
 	uFollowID NUMBER(10) CONSTRAINT fk_user_followid REFERENCES Users(uUserID),
 	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID)
 );
-
-
-
-
-
+	
 
 
 CREATE SEQUENCE POSTID_SEQ
@@ -57,5 +54,4 @@ CREATE SEQUENCE REPLYID_SEQ
 CREATE SEQUENCE ATTACHMENTID_SEQ
 	INCREMENT BY 1
 	START WITH 1;
-
 
