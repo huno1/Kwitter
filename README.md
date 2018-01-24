@@ -1,8 +1,44 @@
 # Kwitter開発プロジェクト
-橘川 裕太
-高橋海音<br>
-及川大輔	イフノ
-<br>小崎智也
+
+
+
+SinglePost
+
+	Parameterは PostID(WHERE *** = PostIDてきな)
+
+	PostID
+	UserID
+	Avatar(自分の写真
+	PostContent(中身)
+	PostMedia(アップした画像)
+	PostDate(日付)
+	ReplyCount(返信の数)
+	
+	
+PostList
+
+	Parameterは PostID
+	入れたPostIDの次の１件を取る(WHERE *** < PostID？)
+	
+	中身は上と一緒
+	
+	
+
+Front Pageの左みたいなところに使うやつ
+
+	ログインしているユーザーの
+		UserID
+		自己紹介
+		Avatar(自分の写真
+		ツイート数
+		フォロー数
+		フォロワー数
+		
+	ログインしてないときはとりあえず無視。
+
+
+	
+
 
 ### GitHub Desktopの使い方
 
