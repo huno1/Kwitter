@@ -12,7 +12,7 @@ DROP SEQUENCE ATTACHMENTID_SEQ;
 create table Post(
 	pPostID NUMBER(10) CONSTRAINT pk_postid PRIMARY KEY,
 	uUserID NUMBER(10) CONSTRAINT fk_users_userid REFERENCES users(uUserID),
-	pPostContext VARCHAR2(500) NOT NULL,
+	pPostContent VARCHAR2(500) NOT NULL,
 	pPostDate DATE default sysdate,
 	pState NUMBER(1)
 );
@@ -67,3 +67,17 @@ CREATE SEQUENCE ATTACHMENTID_SEQ
 	START WITH 1;
 
 commit;
+
+
+
+insert into users values(USERID_SEQ.NEXTVAL,'hamade','hamade','濱出',sysdate,'俺は魔女じゃない','default.png','default.png');
+insert into users values(USERID_SEQ.NEXTVAL,'gotou','gotou','後藤',sysdate,'なにぃ','default.png','default.png');
+insert into users values(USERID_SEQ.NEXTVAL,'nagase','nagase','長瀬',sysdate,'ご馳走様','default.png','default.png');
+
+
+insert into post values(POSTID_SEQ.NEXTVAL,1,'濱出のダミーデータ',sysdate,1);
+insert into post values(POSTID_SEQ.NEXTVAL,2,'後藤のダミーデータ',sysdate,1);
+insert into post values(POSTID_SEQ.NEXTVAL,3,'長瀬のダミーデータ',sysdate,1);
+
+
+
