@@ -21,5 +21,5 @@ public abstract class AbstractDaoFactory{
     return f;
   }
 
-  public abstract ProductsDao getProductsDao();
+  public abstract KretaDao getKretaDao();
 }
