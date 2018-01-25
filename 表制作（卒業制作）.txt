@@ -45,7 +45,8 @@ create table Attachment(
 
 create table Follow(
 	uFollowID NUMBER(10) CONSTRAINT fk_user_followid REFERENCES Users(uUserID),
-	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID)
+	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID),
+PRIMARY KEY(uFollowID,uObserberID)
 );
 	
 
@@ -78,6 +79,11 @@ insert into users values(USERID_SEQ.NEXTVAL,'nagase','nagase','長瀬',sysdate,'
 insert into post values(POSTID_SEQ.NEXTVAL,1,'濱出のダミーデータ',sysdate,1);
 insert into post values(POSTID_SEQ.NEXTVAL,2,'後藤のダミーデータ',sysdate,1);
 insert into post values(POSTID_SEQ.NEXTVAL,3,'長瀬のダミーデータ',sysdate,1);
+
+
+insert into follow values(1,2);
+insert into follow values(2,1);
+
 
 
 
