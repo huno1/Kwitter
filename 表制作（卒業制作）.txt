@@ -9,6 +9,19 @@ DROP SEQUENCE REPLYID_SEQ;
 DROP SEQUENCE ATTACHMENTID_SEQ;
 
 
+
+create table Users(
+	uUserID NUMBER(10) CONSTRAINT pk_userid PRIMARY KEY,
+	uLoginID VARCHAR2(30) UNIQUE NOT NULL,
+	uPassword VARCHAR2(30) NOT NULL,
+	uUserName VARCHAR2(40) NOT NULL,
+	uRegistrationDate DATE default SYSDATE,
+	uIntroduction VARCHAR2(320),
+	uIconPath VARCHAR2(500) default 'default.png',
+	uHeaderImagePath VARCHAR2(500) default 'default.png'
+);
+
+
 create table Post(
 	pPostID NUMBER(10) CONSTRAINT pk_postid PRIMARY KEY,
 	uUserID NUMBER(10) CONSTRAINT fk_users_userid REFERENCES users(uUserID),
@@ -17,16 +30,7 @@ create table Post(
 	pState NUMBER(1)
 );
 
-create table Users(
-	uUserID NUMBER(10) CONSTRAINT pk_userid PRIMARY KEY,
-	uLoginID VARCHAR2(30) UNIQUE NOT NULL,
-	uPassword VARCHAR2(30) NOT NULL,
-	uUserName VARCHAR2(40) NOT NULL,
-	uRegistrationDate DATE default SYSDATE,
-	uIntroduction VARCHAR2(320) default SYSDATE,
-	uIconPath VARCHAR2(500) default 'default.png',
-	uHeaderImagePath VARCHAR2(500) default 'default.png'
-);
+
 	
 create table Reply(
 	rReplyID NUMBER(10) CONSTRAINT pk_replyid PRIMARY KEY,
@@ -40,7 +44,7 @@ create table Reply(
 create table Attachment(
 	aAttachmentID NUMBER(10) CONSTRAINT pk_attachmentid PRIMARY KEY,
 	pPostID NUMBER(10) CONSTRAINT fk_post_postid2 REFERENCES Post(pPostID), 
-	aFIlePath VARCHAR2(500) NOT NULL
+	aFilePath VARCHAR2(500) NOT NULL
 );
 
 create table Follow(
