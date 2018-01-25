@@ -78,11 +78,17 @@ commit;
 insert into users values(USERID_SEQ.NEXTVAL,'hamade','hamade','濱出',sysdate,'俺は魔女じゃない','default.png','default.png');
 insert into users values(USERID_SEQ.NEXTVAL,'gotou','gotou','後藤',sysdate,'なにぃ','default.png','default.png');
 insert into users values(USERID_SEQ.NEXTVAL,'nagase','nagase','長瀬',sysdate,'ご馳走様','default.png','default.png');
+insert into users values(USERID_SEQ.NEXTVAL,'ozaki','ozaki','小崎',sysdate,'ごめんください','default.png','default.png');
+insert into users values(USERID_SEQ.NEXTVAL,'kikkawa','kikkawa','橘川',sysdate,'いただきます','default.png','default.png');
+
+
 
 
 insert into post values(POSTID_SEQ.NEXTVAL,1,'濱出のダミーデータ',sysdate,1);
 insert into post values(POSTID_SEQ.NEXTVAL,2,'後藤のダミーデータ',sysdate,1);
 insert into post values(POSTID_SEQ.NEXTVAL,3,'長瀬のダミーデータ',sysdate,1);
+insert into post values(POSTID_SEQ.NEXTVAL,4,'小崎のダミーデータ',sysdate,1);
+insert into post values(POSTID_SEQ.NEXTVAL,5,'橘川のダミーデータ',sysdate,1);
 
 
 insert into follow values(1,2);
