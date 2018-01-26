@@ -3,8 +3,9 @@ package beans;
 import java.util.ArrayList;
 
 public class PostBean implements Bean{
-  private String postID;
+  private String postID; 
   private String userID;
+  private String userName;
   private String avatar;
   private String postContent;
   private String postMedia;
@@ -29,6 +30,12 @@ public class PostBean implements Bean{
     return this.userID;
   }
 
+  public void setUserName(String userName){
+	this.userName = userName;
+  }
+  public String getUserName(){
+    return this.userName;
+  }
   public void setAvatar(String avatar){
     this.avatar = avatar;
   }

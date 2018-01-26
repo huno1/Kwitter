@@ -7,6 +7,7 @@ import beans.UsersBean;
 
 import dao.AbstractDaoFactory;
 import dao.KretaDao;
+import dao.OracleConnectionManager;
 
 public class CreateAccountCommand extends AbstractCommand{
   public ResponseContext execute(ResponseContext resc){
@@ -18,13 +19,25 @@ public class CreateAccountCommand extends AbstractCommand{
     String checkPass=reqc.getParameter("checkPass")[0];
 
     if(password.equals(checkPass)){
-  		String sql = "insert into Users (uUserID,uUserName,uLoginID,uPassword) values (userID_seq.nextval,'"+userName+"','"+loginID+"','"+password+"')";
 
-  	  AbstractDaoFactory factory = AbstractDaoFactory.getFactory();
+      OracleConnectionManager.getInstance().beginTransaction();
+      AbstractDaoFactory factory = AbstractDaoFactory.getFactory();
   		KretaDao dao = factory.getKretaDao();
-  		dao.sqlUpdate(sql);
+
+      if(dao.loginIdCheck(loginID)==0){
+
+    		String sql = "insert into Users (uUserID,uUserName,uLoginID,uPassword) values (userID_seq.nextval,'"+userName+"','"+loginID+"','"+password+"')";
+        System.out.println(sql);
+
+    		dao.sqlUpdate(sql);
+        System.out.println("ìoò^äÆóπ");
+      }else{
+        System.out.println("LoginIDèdï°");
+      }
+      OracleConnectionManager.getInstance().commit();
+      OracleConnectionManager.getInstance().closeConnection();
     }
-  	
+
     resc.setTarget("createaccount");
     return resc;
   }

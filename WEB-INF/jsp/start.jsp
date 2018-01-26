@@ -19,6 +19,7 @@
 <a href="follow">command.UnFollowCommand</a><br>
 <a href="addpost">command.AddPostCommand</a><br>
 <a href="newcreateaccount">アカウント作成</a><br>
+<a href="loginuserinfo">左側のやつ</a><br>
 
 </body>
 </html>

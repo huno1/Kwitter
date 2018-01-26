@@ -12,6 +12,7 @@ public class UsersBean implements Bean{
 
   public void setUserID(String userID){
     this.userID = userID;
+  	System.out.println("Beanの中でデバッグ");
   }
   public String getUserID(){
     return this.userID;

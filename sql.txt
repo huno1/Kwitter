@@ -1,0 +1,31 @@
+select users.uusername,post.ppostid,post.uuserid,post.ppostcontent,post.ppostdate
+	from users join post
+	on users.uuserid=post.uuserid
+	where post.ppostid=1;
+
+SinglePost用SQL
+
+
+SELECT post.pPostID, post.uUserID, users.uUserName, users.uIconPath, post.pPostContent,
+       attachment.aFilePath, post.pPostDate, count(reply.pPostID) "返信数"
+FROM Post post 
+LEFT JOIN Users users ON (post.uUserID = users.uUserID)
+LEFT JOIN Attachment attachment ON (post.pPostID = attachment.pPostID) 
+LEFT JOIN Reply reply ON (post.pPostID = reply.pPostID)
+WHERE post.pPostID = 1
+GROUP BY post.pPostID, post.uUserID, users.uUserName, users.uIconPath, post.pPostContent,
+         attachment.aFilePath, post.pPostDate;
+
+
+FRONTPAGEの左の奴のSQL
+
+
+SELECT USERS.uuserid,USERS.uintroduction,USERS.uiconpath,
+(select count(ppostid)from post where uuserid=4) as "ツイート数",
+(select count(ufollowid)from follow where uobserberid=4)　as "フォロー数",
+(select count(uobserberid) from follow where ufollowid=4) as "フォロワー数"
+ FROM users users 
+ LEFT JOIN post post ON (USERS.uuserid=POST.uuserid)
+ LEFT JOIN follow follow ON(USERS.uuserid=FOLLOW.ufollowid)
+WHERE USERS.uuserid=4;
+

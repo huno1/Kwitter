@@ -30,6 +30,7 @@ public class LoginCommand extends AbstractCommand{
      //RequestContext‚©‚ç“ü—Íƒpƒ‰ƒ[ƒ^‚Ìæ“¾
   	 String[] loginids=(String[])reqc.getParameter("loginid");
      String loginid=loginids[0];
+  	 userbean.setLoginID(loginid);
 
 
   //  userbean.setLoginID(loginid);
@@ -45,13 +46,15 @@ public class LoginCommand extends AbstractCommand{
     AbstractDaoFactory factory = AbstractDaoFactory.getFactory();
 
     KretaDao dao = factory.getKretaDao();
-  	System.out.println("kretaDao  " + dao);
 
     userbean = dao.LoginProcessing(userbean);
-  	System.out.println(userbean.getPassword().equals(pass));
     if(userbean.getPassword().equals(pass)){
       loginflag = true;
+    }else{
+      System.out.println("pass‚à‚µ‚­‚ÍID‚ªˆá‚¢‚Ü‚·");
+       resc.setResult("pass‚à‚µ‚­‚ÍID‚ªˆá‚¢‚Ü‚·");
     }
+
     if(loginflag){
       HttpSession session = req.getSession();
       session.setAttribute("loginUser", userbean);

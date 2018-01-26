@@ -3,7 +3,7 @@
 	<div class="accountgroup">
 		<div class="left">
 	<div class="avatar"><img src="${result.avatar}"></div>
-	<div class="accountname"><a href="">${result.userID}</a></div>
+	<div class="accountname"><a href="/user?_uid${result.userID}">${result.userName}</a></div>
 		</div>
 		<div class="follow"><a href="" class="rounded">フォローする</a></div>
 	</div>

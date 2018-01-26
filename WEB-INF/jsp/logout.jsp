@@ -2,8 +2,9 @@
 
 <html>
 <body>
-<h1>logout</h1>
-DAO なし
-
+<h1>ログアウトしました</h1>
+<form action="loginjump" method="post">
+	<input type="submit" value="ログイン" />
+</form>
 </body>
 </html>

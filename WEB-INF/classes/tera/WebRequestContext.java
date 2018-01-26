@@ -3,9 +3,12 @@ package tera;
 import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 
+import beans.UsersBean;
+
 public class WebRequestContext implements RequestContext{
 	private Map _parameters;
 	private HttpServletRequest _request;
+	private UsersBean _userinfo;
 	
 	public String getCommandPath(){
 		String servletPath=_request.getServletPath();
@@ -27,5 +30,12 @@ public class WebRequestContext implements RequestContext{
 		_request = (HttpServletRequest)req;
 		
 		_parameters = _request.getParameterMap();
+	}
+	
+	public Object getUserInfo(){
+		return _userinfo;
+	}
+	public void setUserInfo(Object userinfo){
+		this._userinfo = (UsersBean)userinfo;
 	}
 }

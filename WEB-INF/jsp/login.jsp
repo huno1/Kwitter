@@ -3,6 +3,7 @@
 <html>
 <body>
 <h1>login</h1>
+${result}
 <% UsersBean ub = (UsersBean)session.getAttribute("loginUser"); %>
      <% if(ub == null) { %>
 	<form method="post" action="login">
@@ -13,6 +14,7 @@
 
 <% }else{ %>
 	<p><%= ub.getUserName() %></p>
+	<a href="/kreta">スタート画面へ</a>
 	
 <% } %>
 </body>

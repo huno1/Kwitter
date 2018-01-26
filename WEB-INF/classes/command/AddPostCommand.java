@@ -2,7 +2,7 @@ package command;
 
 import tera.RequestContext;
 import tera.ResponseContext;
-import beans.PostBean;
+import beans.*;
 
 import dao.OracleConnectionManager;
 import dao.AbstractDaoFactory;
@@ -16,11 +16,12 @@ public class AddPostCommand extends AbstractCommand{
     public ResponseContext execute(ResponseContext resc){
       RequestContext reqc = getRequestContext();
 
-      String[] postContent = reqc.getParameter("postcontent");
+      String[] postcontent = reqc.getParameter("postcontent");
+    	
+    	UsersBean ub = (UsersBean)reqc.getUserInfo();
+    	String userid = ub.getUserID();
 
-      PostBean pb = new PostBean();
-
-      pb.setPostContent(postContent[0]);
+	 String sql = "insert into Post(pPostId ,pPostContent, uUserID) values(postid_seq.nextval, '"+postcontent[0]+"', '"+userid+"')";
 
       OracleConnectionManager ocm = OracleConnectionManager.getInstance();
   		ocm.beginTransaction();
@@ -28,12 +29,11 @@ public class AddPostCommand extends AbstractCommand{
 
       AbstractDaoFactory factory = AbstractDaoFactory.getFactory();
 
-  		KuretaDao dao = factory.getKretaDao();
-    	
-    	 String sql = "insert into Post(pPostId ,pPostContent) values(postid_seq.nextval,?)";
+  		KretaDao dao = factory.getKretaDao();
     	
     	
-    	kreta.sqlUpdate(sql);
+    	
+    	dao.sqlUpdate(sql);
 
   		ocm.commit();
   		ocm.closeConnection();

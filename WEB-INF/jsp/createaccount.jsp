@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+﻿<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 
 <html>
 <body>
@@ -10,5 +10,6 @@
   パスワードの確認<input type="password" name="checkPass"><br>
 	<input type="submit" value="送信">
 </form>
+<a href="/kreta/loginjump">ログイン</a>
 </body>
 </html>

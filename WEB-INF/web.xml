@@ -19,4 +19,18 @@
 		<url-pattern>/web-resources/*</url-pattern>
 	</servlet-mapping>
 	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/test/*</url-pattern>
+	</servlet-mapping>
+	
+    <servlet>
+        <servlet-name>wsChat</servlet-name>
+        <servlet-class>websocket.ChatWebSocketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>wsChat</servlet-name>
+        <url-pattern>/websocket/chat</url-pattern>
+    </servlet-mapping>
+	
 </web-app>

@@ -93,6 +93,13 @@ lawson.co.jp
 						<li>作成中…</li>
 						<li>作成中…</li>
 					</ul>
+					
+					<div id="console-container">
+						<div id="room"></div>
+					</div>
+					<p>
+						<input type="text" placeholder="type and press enter to chat" id="chat">
+					</p>
 				</div>
 			</div>
 		</div>
