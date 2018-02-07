@@ -27,7 +27,7 @@ create table Post(
 	uUserID NUMBER(10) CONSTRAINT fk_users_userid REFERENCES users(uUserID),
 	pPostContent VARCHAR2(500) NOT NULL,
 	pPostDate DATE default sysdate,
-	pState NUMBER(1)
+	pState NUMBER(1) default 0
 );
 
 
