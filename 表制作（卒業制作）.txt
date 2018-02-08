@@ -49,14 +49,14 @@ create table Attachment(
 );
 
 create table Follow(
-	uFollowID VARCHAR2(30) CONSTRAINT fk_user_followid REFERENCES Users(uUserID),
-	uObserberID VARCHAR2(30) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID),
+	uFollowID VARCHAR2(30) CONSTRAINT fk_user_followid REFERENCES Users(uLoginID),
+	uObserberID VARCHAR2(30) CONSTRAINT fk_user_obserberid REFERENCES Users(uLoginID),
 PRIMARY KEY(uFollowID,uObserberID)
 );
 
 create table Iine(
 	pTargetPostID NUMBER(10) CONSTRAINT pk_like_tartgetpostid REFERENCES Post(pPostID),
-	uUserID VARCHAR2(30) CONSTRAINT pk_like_userid REFERENCES Users(uUserID),
+	uUserID VARCHAR2(30) CONSTRAINT pk_like_userid REFERENCES Users(uLoginID),
 	PRIMARY KEY(pTargetPostID,uUserID)
 );
 
