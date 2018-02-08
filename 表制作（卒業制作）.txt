@@ -52,7 +52,12 @@ create table Follow(
 	uObserberID NUMBER(10) CONSTRAINT fk_user_obserberid REFERENCES Users(uUserID),
 PRIMARY KEY(uFollowID,uObserberID)
 );
-	
+
+create table Iine(
+	pTargetPostID NUMBER(10) CONSTRAINT pk_like_tartgetpostid REFERENCES Post(pPostID),
+	uUserID NUMBER(10) CONSTRAINT pk_like_userid REFERENCES Users(uUserID),
+	PRIMARY KEY(pTargetPostID,uUserID)
+);
 
 
 CREATE SEQUENCE POSTID_SEQ
