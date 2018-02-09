@@ -97,8 +97,16 @@ insert into post values(POSTID_SEQ.NEXTVAL,4,'小崎のダミーデータ',sysda
 insert into post values(POSTID_SEQ.NEXTVAL,5,'橘川のダミーデータ',sysdate,0);
 
 
-insert into follow values(hamade,gotou);
-insert into follow values(gotou,hamade);
+
+insert into Reply values(REPLYID_SEQ.NEXTVAL,1,1,1,sysdate,0,'濱出の返信ダミーデータ');
+insert into Reply values(REPLYID_SEQ.NEXTVAL,1,1,2,sysdate,0,'後藤の返信ダミーデータ');
+insert into Reply values(REPLYID_SEQ.NEXTVAL,2,2,3,sysdate,0,'長瀬の返信ダミーデータ');
+insert into Reply values(REPLYID_SEQ.NEXTVAL,2,2,4,sysdate,0,'小崎の返信ダミーデータ');
+insert into Reply values(REPLYID_SEQ.NEXTVAL,3,2,5,sysdate,0,'橘川の返信ダミーデータ');
+
+
+insert into follow values('hamade','gotou');
+insert into follow values('gotou','hamade');
 
 
 
