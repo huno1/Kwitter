@@ -97,8 +97,8 @@ insert into post values(POSTID_SEQ.NEXTVAL,4,'小崎のダミーデータ',sysda
 insert into post values(POSTID_SEQ.NEXTVAL,5,'橘川のダミーデータ',sysdate,0);
 
 
-insert into follow values(1,2);
-insert into follow values(2,1);
+insert into follow values(hamade,gotou);
+insert into follow values(gotou,hamade);
 
 
 
