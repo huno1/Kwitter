@@ -98,7 +98,7 @@ insert into follow values('hamade','gotou');
 insert into follow values('gotou','hamade');
 
 
-comiit;
+commit;
 
 
 
