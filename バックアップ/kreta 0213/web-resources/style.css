@@ -1,0 +1,571 @@
+﻿html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*====================*/
+
+img{
+	max-width: 100%;
+	height: auto;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
+p a{
+	color: #aaf;
+}
+p a:hover {
+	text-decoration: underline;
+}
+
+p {
+	white-space: pre-line;
+}
+.accountname a:hover {
+	color: rgba(170,170,255,1);
+}
+.clearfix:after{
+	content:"";
+	width: 100%;
+	height: 0;
+	clear: both;
+	display: table;
+}
+
+.inner9{
+	width: 940px;
+	padding: 0 20px;
+	max-width: 100%;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: border-box;
+}
+
+body{
+	background: #e6ecf0;
+	min-width: 1000px;
+	box-sizing: border-box;
+}
+header{
+	width: 100%;
+	height: auto;
+	line-height: 50px;
+	background: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	border-bottom: 1px solid #00000033;
+}
+header .head_l {
+	float: left;
+}
+header .head_r {
+	float: right;
+}
+header .head_l > li{
+	float: left;
+	padding-right: 15px;
+}
+header .head_l > li:not(:first-of-type){
+	padding-left: 15px;
+}
+
+header .head_l li{
+	border-bottom: 3px solid transparent;
+	box-sizing: border-box;
+	height: 50px;
+}
+header .head_l li a{
+	font-weight: bold;
+	font-size: 15px;
+	color: #666;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+header .head_l li:hover{
+	border-bottom: 3px solid #F5ABB5;
+	transition: 0.5s;
+}
+header .head_l li:hover a{
+	transition: 0.3s;
+	color: #F5ABB5;
+}
+header .head_r > *{
+	float: left;
+	margin-right: 15px;
+}
+header .head_r > *:not(:first-of-type){
+	/padding-left: 15px;
+}
+header .head_r .searchform input{
+	border-radius: 100px;
+	font-size: 11px;
+	padding: 5px 15px;
+	line-height: 20px;
+	background-color: #ccccccaa;
+	border: 1px solid #999;
+}
+header .head_r .avatar{
+	padding: 5px;
+	height: 50px;
+    line-height: 0;
+    box-sizing: border-box;
+}
+header .head_r .avatar > a{
+	display: inline-block;
+	vertical-align: middle;
+	height: 40px;
+	width: 40px;
+	border-radius: 300px;
+	border: 1px solid #ccc;
+	overflow: hidden;
+}
+
+i+*{
+	padding-left: 0.5em;
+}
+
+input[type="submit"]{
+	cursor: pointer;
+}
+
+#main{
+	padding-top: 50px;
+	z-index: 5;
+}
+.rounded{
+	color: #fff;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	line-height: 1;
+	border-radius: 100px;
+	padding: 9px 15px;
+	background-color: rgba(170,170,255,0.8);
+	text-decoration: none;
+}
+.rounded:hover{
+	background-color: rgba(170,170,255,1);
+}
+.leftSide{
+	float: left;
+	width: 200px;
+}
+.centerSide{
+	float: left;
+	width: 500px;
+	margin: 0 20px;
+}
+.rightSide{
+	float: right;
+	width: 160px;
+}
+
+#popup_window{
+	background: #000000aa;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	z-index: 200;
+	display: none;
+	box-sizing: border-box;
+}
+#popup_window .popup_box{
+	border-radius: 5px;
+	background: #fff;
+	width: 560px;
+	min-height: 100px;
+	box-sizing: border-box;
+	overflow: auto;
+	margin: 70px auto;
+}
+
+#popup_window .postsingle{
+	padding: 30px;
+}
+
+#popup_window .accountgroup{
+    padding: 0;
+    display: block;
+    position: relative;
+	margin-bottom: 10px;
+}
+#popup_window .postsingle .accountgroup{
+	
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#popup_window .avatar{
+	width: 30px;
+    height: 30px;
+    border-radius: 300px;
+    border: 5px solid #fff;
+    overflow: hidden;
+	display: inline-block;
+	vertical-align: middle;
+}
+#popup_window .postsingle .avatar{
+	width: 50px;
+    height: 50px;
+}
+#popup_window .accountname{
+    display: inline-block;
+    font-weight: bold;
+    font-size: 15px;
+	vertical-align: middle;
+}
+#popup_window .postsingle .accountname{
+	font-size: 20px;
+}
+#popup_window .accountgroup .follow{
+    display: inline-block;
+	vertical-align: middle;
+}
+
+#popup_window .postsingle .contentgroup{
+}
+#popup_window .postsingle .contentgroup .postcontent{
+	font-size: 20px;
+	line-height: 1.5;
+	padding-top: 10px;
+	margin-bottom: 20px;
+}
+#popup_window .postsingle .contentgroup .postdate{
+	font-size: 14px;
+	color: #555;
+	padding: 15px 0;
+}
+
+
+#popup_window .postsingle .menugroup{
+	border-top: 1px solid #ccc;
+	padding-top: 15px;
+}
+
+
+#popup_window .writereply{
+	background-color: #f5f8fa;
+	border-top: 1px solid #e6ecf0;
+	padding: 15px 30px;
+	padding-left: 100px;
+}
+#popup_window .writereply form{
+	position: relative;
+}
+#popup_window .writereply form .avatar{
+	position: absolute;
+	top: 0;
+	left: -70px;
+}
+#popup_window .writereply textarea{
+	border: rgba(170,170,255,1);
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	max-width: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#popup_window .writereply .right .submitwrap{
+	width: 100%;
+	text-align: right;
+}
+#popup_window .writereply .right .submitwrap .rounded{
+	display: inline-block;
+	border: none;
+	margin: 10px 0;
+}
+
+#popup_window .readreply {
+}
+#popup_window .readreply ul li{
+	padding: 15px 30px;
+	border-top: 1px solid #e6ecf0;
+	padding-left: 100px;
+}
+
+#popup_window .readreply ul li .avatar{
+	position: absolute;
+	top: 0;
+	left: -70px;
+}
+#popup_window .readreply ul li .accountgroup .postdate{
+	display: inline-block;
+    font-size: 12px;
+    color: #666;
+}
+#popup_window .readreply ul li .postcontent{
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+#popup_window .menugroup{
+	font-size: 14px;
+}
+#popup_window .menugroup a{
+	display: inline-block;
+	margin-right: 15px;
+}
+
+#popup_window .writepost {
+    background-color: #f5f8fa;
+    border-top: 1px solid #e6ecf0;
+    padding: 15px 30px;
+    padding-left: 100px;
+}
+#popup_window .writepost form{
+	position: relative;
+}
+#popup_window .writepost form .avatar{
+	position: absolute;
+	top: 0;
+	left: -70px;
+}
+#popup_window .writepost textarea{
+	border: rgba(170,170,255,1);
+	background: #fff;
+	border-radius: 10px;
+	padding: 10px;
+	max-width: 100%;
+	width: 100%;
+	box-sizing: border-box;
+}
+
+#popup_window .writepost .right .submitwrap{
+	width: 100%;
+	text-align: right;
+}
+#popup_window .writepost .right .submitwrap .rounded{
+	display: inline-block;
+	border: none;
+	margin: 10px 0;
+}
+
+#subheader{
+	background: #fff;
+	box-sizing: border-box;
+}
+#subheader .sh_top{
+	background: #fff;
+}
+#subheader .sh_top .sh_bg{
+	background-color: #aaf;
+	background-image: url(images/yakitori.jpeg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	width: 100%;
+	height: 300px;
+}
+#subheader .sh_bot {
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,0.25);
+}
+#subheader .sh_bot .inner9{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#subheader .sh_bot .rightSide{
+	text-align: center;
+}
+#subheader .sh_bot ul li {
+	border-bottom: 3px solid transparent;
+	box-sizing: border-box;
+	height: 70px;
+	float: left;
+	padding: 15px;
+	text-align: center;
+	line-height: 20px;
+}
+#subheader .sh_bot ul li a{
+	font-size: 15px;
+	color: #666;
+}
+#subheader .sh_bot ul li a span{
+	font-weight: bold;
+	display: block;
+	font-size: 120%;
+}
+#subheader .sh_bot ul li.current,
+#subheader .sh_bot ul li:hover {
+	border-bottom: 3px solid #F5ABB5;
+	transition: border 0.5s;
+}
+#subheader .sh_bot ul li.current a span,
+#subheader .sh_bot ul li:hover a span{
+	transition: 0.3s;
+	color: #F5ABB5;
+}
+
+#mbody .inner9 {
+	padding-top: 20px;
+}
+
+#mbody .leftSide {
+	margin-top: -200px;
+}
+#mbody .leftSide .avatar{
+	width: 200px;
+	height: 200px;
+	border-radius: 300px;
+	border: 5px solid #fff;
+	overflow: hidden;
+	background-color: #ffffffee;
+}
+#mbody .leftSide .accountname{
+	font-weight: bold;
+	font-size: 20px;
+	padding: 20px 0;
+}
+#mbody .leftSide .accountinfo{
+    line-height: 1.5;
+    font-size: 14px;
+	
+}
+
+
+
+#mbody .centerSide {
+    min-height: 100vh;
+	padding-bottom: 100px;
+}
+#mbody .centerSide .postlist li{
+	background: #fff;
+	border-bottom: 1px solid transparent;
+	padding: 15px;
+	padding-left: 80px;
+	margin-bottom: 1px;
+}
+#mbody .centerSide .postlist li:hover{
+	background: #ffffffcc;
+	cursor: pointer;
+}
+#mbody .centerSide .postlist li .accountgroup{
+	padding: 0;
+	display: block;
+	position: relative;
+}
+#mbody .centerSide .postlist li .contentgroup{
+	padding: 5px 0;
+	display: block;
+	position: relative;
+}
+#mbody .centerSide .postlist li .menugroup{
+	padding: 10px 0;
+	display: block;
+	position: relative;
+}
+
+
+#mbody .centerSide .postlist li .accountgroup {
+	margin-bottom: 10px;
+}
+#mbody .centerSide .postlist li .accountgroup .avatar{
+	width: 50px;
+	height: 50px;
+	border-radius: 300px;
+	border: 5px solid #fff;
+	overflow: hidden;
+	left: -70px;
+	top: 0;
+	position: absolute;
+}
+
+#mbody .centerSide .postlist li .accountgroup .accountname{
+	display: inline-block;
+	font-weight: bold;
+	font-size: 15px;
+}
+#mbody .centerSide .postlist li .accountgroup .postdate{
+	display: inline-block;
+	font-size: 12px;
+	color: #666;
+}
+#mbody .centerSide .postlist li .contentgroup .postcontent{
+	font-size: 14px;
+	line-height: 1.5;
+	margin-bottom: 15px;
+}
+#mbody .centerSide .postlist li .contentgroup .postimage{
+	width: 100%;
+	height: 0;
+	padding-top: 60%;
+	border-radius: 5px;
+	overflow: hidden;
+	position: relative;
+}
+#mbody .centerSide .postlist li .contentgroup .postimage > img,
+#mbody .centerSide .postlist li .contentgroup .postimage > video{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: auto;
+	max-width: none;
+	height: 100%;
+}
+
+#mbody .centerSide .postlist li .menugroup {
+	font-size: 13px;
+}
+#mbody .centerSide .postlist li .menugroup span{
+	padding: 0 10px;
+}
+
+
+#mbody .rightSide ul {
+}
+#mbody .rightSide ul li {
+	font-size: 13px;
+	padding: 10px;
+	background: #fff;
+	border-bottom: 1px solid transparent;
+}

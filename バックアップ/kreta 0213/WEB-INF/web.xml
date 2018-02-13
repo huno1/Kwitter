@@ -1,0 +1,46 @@
+<web-app>
+<!--
+	<welcome-file-list>
+		<welcome-file>/WEB-INF/jsp/index.jsp</welcome-file>
+	</welcome-file-list>
+-->
+	<servlet>
+		<servlet-name>front</servlet-name>
+		<servlet-class>tera.FrontServlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>front</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>start</servlet-name>
+		<jsp-file>/WEB-INF/jsp/start.jsp</jsp-file>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>start</servlet-name>
+		<url-pattern>/start</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/web-resources/*</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/test/*</url-pattern>
+	</servlet-mapping>
+	
+    <servlet>
+        <servlet-name>wsChat</servlet-name>
+        <servlet-class>websocket.ChatWebSocketServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>wsChat</servlet-name>
+        <url-pattern>/websocket/chat</url-pattern>
+    </servlet-mapping>
+	
+</web-app>
