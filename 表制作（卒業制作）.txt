@@ -49,8 +49,8 @@ PRIMARY KEY(uFollowID,uObserberID)
 
 create table Iine(
 	pTargetPostID NUMBER(10) CONSTRAINT pk_like_tartgetpostid REFERENCES Post(pPostID),
-	uUserID VARCHAR2(30) CONSTRAINT pk_like_userid REFERENCES Users(uLoginID),
-	PRIMARY KEY(pTargetPostID,uUserID)
+	uLoginID VARCHAR2(30) CONSTRAINT pk_like_userid REFERENCES Users(uLoginID),
+	PRIMARY KEY(pTargetPostID,uLoginID)
 );
 
 
