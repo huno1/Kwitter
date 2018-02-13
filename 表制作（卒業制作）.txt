@@ -27,7 +27,7 @@ create table Post(
 	pPostContent VARCHAR2(500) NOT NULL,
 	pPostDate DATE default sysdate,
 	pState NUMBER(1) default 0,
-	pFilePath VARCHAR2(500) 
+	attachment VARCHAR2(500) 
 );
 
 
