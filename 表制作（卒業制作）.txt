@@ -95,8 +95,8 @@ insert into Reply values(REPLYID_SEQ.NEXTVAL,2,2,4,sysdate,'小崎の返信ダ�
 insert into Reply values(REPLYID_SEQ.NEXTVAL,3,2,5,sysdate,'橘川の返信ダミーデータ');
 
 
-insert into follow values('hamade','gotou');
-insert into follow values('gotou','hamade');
+insert into follow values('hamade','gotou',SYSDATE);
+insert into follow values('gotou','hamade',SYSDATE);
 
 
 commit;
