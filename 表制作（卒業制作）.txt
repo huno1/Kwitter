@@ -44,6 +44,7 @@ create table Reply(
 create table Follow(
 	uFollowID VARCHAR2(30) CONSTRAINT fk_user_followid REFERENCES Users(uLoginID),
 	uObserberID VARCHAR2(30) CONSTRAINT fk_user_obserberid REFERENCES Users(uLoginID),
+	ufollowDate DATE DEFAULT SYSDATE,
 PRIMARY KEY(uFollowID,uObserberID)
 );
 
